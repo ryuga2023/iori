@@ -1,0 +1,504 @@
+@charset "UTF-8";
+/*
+VARIABLES
+================================================== */
+:root {
+    --light-green: #d5edeb;
+    --purple: rgb(123, 11, 135);
+    --brown: #62514a;
+    --black: #000000;
+    --white: #fff;
+}
+
+/*共通部分
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+html{
+    Scroll-behavior:smooth;
+    font-size:100%;
+}
+body{
+        font-family:"Yu Gothic Medium","游ゴシック Medium","YuGothic","游ゴシック体","ヒラギノ角ゴ pro w3",sans-serif;
+    line-height: 1.7;
+    background: linear-gradient(#371700,#fff);
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 75%;
+}
+
+/* HEADER
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+.logo{
+    width:210px;
+    margin-top:14px;
+    
+}
+.main-nav{
+    display: flex;
+    font-size:1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style:none;
+}
+.main-nav li {
+    margin-left: 36px;
+}
+.main-nav a{
+    color:rgb(223, 212, 204);
+}
+.main-nav a:hover{
+    color:#0bd;
+}
+.page-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/*HOME
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+.home-content{
+    text-align: center;
+    margin-top: 10%;
+}
+.home-content p {
+    font-size: 1.125rem;
+    margin: 10px 0 42px;
+    color: #ddd;
+}
+
+/*見出し
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+.page-title{
+    font-size: 5rem;
+    font-family: 'philosopher',serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #ddd;
+}
+
+
+/*ボタン
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+.button{
+    font-size: 1.375rem;
+    background: rgb(139, 24, 24);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-style: double;
+    padding: 18px 32px;
+}
+.button:hover{
+    background: #542f04bb;
+}
+
+/*大きな背景画像
+ーーーーーーーーーーーーーーーーーーーーーーーーー*/
+.big-bg{
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+#home{
+    background-image: url(../images/main-bg.jpg),linear-gradient(#33160e,#d0653b);
+    
+    background-blend-mode: hard-light;
+    min-height: 100vh;
+}
+#home .page-title{
+    text-transform: none;
+    color: #ddd;
+}
+
+/*フッター
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+footer{
+    background: #432;
+    text-align: center;
+    padding: 2rem;
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+footer li {
+    margin: 0 12px;
+    list-style:none;
+}
+footer a{
+    color: #fff;
+}
+footer a:hover{
+    color: #c7c3ba;
+}
+footer small{
+    color:#c7c3ba;
+    font-size: 0.875rem;
+}
+/*NEWS
+ーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+#news{
+    background-image: url(../images/news-bg.jpg);
+    height:auto;
+    margin-bottom: 40px;
+}
+#news .page-title{
+    text-align: center;
+    color: #ddd;
+}
+
+/*記事部分*/
+article{
+    width: 60%;
+    order: 2;
+}
+
+/*サイドバー*/
+aside{
+    width: 22%;
+    order: 3;
+}
+.ad{
+    order: 1;
+}
+
+.news-contents{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.post-info{
+    position: relative;
+    padding-top: 4px;
+    margin-bottom: 40px;
+}
+
+.post-date{
+    background: #0bd;
+    border-radius: 50%;
+    color: #ddd;
+    width: 100px;
+    height: 100px;
+    font-size: 1.625rem;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    padding-top: 10px;
+}
+
+.post-date span{
+    font-size: 1rem;
+    border-top: 1px rgba(255,255,255,.5)solid;
+    padding-top: 6px;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.post-title{
+    font-family: "Yu Mincho","YuMincho",serif;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.post-title,
+.post-cat{
+    margin-left: 120px;
+    color: #ddd;
+}
+
+article img{
+    margin-bottom: 20px;
+}
+article h3{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+article p{
+    margin-bottom: 1rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.sub-title{
+    color: #ffffff;
+    font-size: 1.375rem;
+    padding: 0 8px 8px;
+    border-bottom: 2px #0bd solid;
+    font-weight: normal;
+}
+
+aside p{
+    padding: 12px 10px;
+    color: rgb(0, 0, 0);
+}
+
+.sub-menu{
+    margin-bottom: 60px;
+    list-style: none;
+    color: #ddd;
+}
+
+.sub-menu li{
+    border-bottom: 1px #ddd solid;
+}
+
+.sub-menu a{
+    color: #ddd;;
+    padding: 10px;
+    display: block;
+}
+
+.sub-menu a:hover{
+    color: #0bd;
+}
+
+
+/*MENU
+ーーーーーーーーーーーーーーーーーーーーーーー*/
+#menu{
+    background-image: url(../images/menu-bg.jpg);
+    min-height: 100vh;
+}
+.menu-content{
+    max-width: 560px;
+    margin-top: 10%;
+}
+.menu-content .page-title{
+    text-align: center;
+    color: #ddd;
+}
+.menu-content p{
+    font-size: 1.125rem;
+    margin: 10px 0 0;
+}
+.grid{
+    display: grid;
+    gap:26px;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    margin-top: 6%;
+    margin-bottom: 50px;
+}
+
+/*PHOTO
+-------------------------------------------*/
+.big-box{
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+.big-box img{
+    height: 94%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*CONTACT
+----------------------------------------------*/
+.back{
+    min-height: 50vh;
+}
+
+.page-title{
+    text-align: center;
+    color: #050003;
+}
+
+.contact-content{
+    max-width: 560px;
+    margin: 0 auto;
+    margin-top: 10%;
+    text-align: center;
+}
+
+/*フォーム
+form div{
+    background-color: #33160e;
+    margin-bottom: 14px;
+}
+label{
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    display: block;
+    color: #ddd;
+}
+input[type="text"],
+input[type="email"],
+textarea{
+    background: rgba(226, 218, 212, 0.5);
+    border: 1px rgb(255, 255, 255) solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+input[type="text"],
+input[type="email"]{
+    width: 100%;
+    max-width: 240px;
+}
+textarea{
+    width: 100%;
+    max-width: 480px;
+    height: 6rem;
+}
+input[type="submit"]{
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}*/
+
+/*店舗情報・地図*/
+#location{
+    padding: 4% 0;
+}
+#location .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.location-info{
+    width: 23%;
+    color: rgb(0, 0, 0);
+}
+.location-info h3{
+    color: #050003;
+}
+.location-info p{
+    padding: 12px 10px;
+}
+.location-map{
+    width: 74%;
+}
+
+/*iframe*/
+iframe{
+    width: 100%;
+}
+
+/*SNS*/
+#sns{
+    background: #faf7f0;
+    padding: 4% 0;
+}
+#sns .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+#sns .sub-title{
+    margin-bottom: 30px;
+    color: #050003;
+}
+.sns-box{
+    width: 30%;
+}
+
+/*モバイル版（レスポンシブ）
+ーーーーーーーーーーーーーーーーーーーーーーー*/
+@media(max-width:600px){
+    .page-title{
+        font-size: 2.5rem;
+    }
+    .page-header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*HEADER*/
+    .main-nav{
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .main-nav li{
+        margin: 0 20px;
+    }
+
+    /*HOME*/
+    .home-content{
+        margin-top: 20%;
+    }
+
+    /*NEWS*/
+    .news-contents{
+        flex-direction: column;
+    }
+    article,
+    aside{
+        width: 100%;
+    }
+    #news.page-title{
+        margin-top: 30px;
+    }
+    aside{
+        margin-top: 60px;
+    }
+    .post-info{
+        margin-bottom: 30px;
+    }
+    .post-date{
+        width: 70px;
+        height: 70px;
+        font-size: 1rem;
+    }
+    .post-date span{
+        font-size: 0.875rem;
+        padding-top: 2px;
+    }
+    .post-title{
+        font-size: 1.357rem;
+    }
+    .post-cat{
+        font-size:0.875rem;
+        margin-top: 10px;
+    }
+    .post-title,
+    .post-cat{
+        margin-left: 80px;
+    }
+
+    /*MENU*/
+    .menu-content{
+        margin-top: 20%;
+    }
+
+    .big-box{
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .big-box img{
+        height: 100%;
+    }
+
+    /*CONTACT*/
+    #contact.page-title{
+        margin-top: 40px;
+    }
+
+    /*フォーム*/
+    input[type="text"],
+    input[type="email"],
+    textarea{
+        max-width: 100%;
+    }
+
+    /*店舗情報・地図*/
+    #location.wrapper,
+    #sns.wrapper{
+        flex-direction: column;
+    }
+    .location-info,
+    .location-map,
+    .sns-box{
+        width: 100%;
+    }
+    .sns-box{
+        margin-bottom: 30%;
+    }
+}
